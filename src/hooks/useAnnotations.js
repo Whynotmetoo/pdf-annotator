@@ -37,8 +37,13 @@ export function useAnnotations(documentKey) {
     setAnnotations((currentAnnotations) => [...currentAnnotations, annotation])
   }
 
+  const clearAnnotations = () => {
+    setAnnotations([])
+  }
+
   return {
     annotations,
     addAnnotation,
+    clearAnnotations,
   }
 }
