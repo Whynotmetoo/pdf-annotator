@@ -6,6 +6,7 @@ A small desktop React take-home project for annotating a bundled construction dr
 
 - Navigate multi-page documents
 - Draw red Ignore and green Capture regions
+- Clear all annotations with one click
 - Store annotations as normalized coordinates (`0-1`)
 - Persist annotations in `localStorage`
 

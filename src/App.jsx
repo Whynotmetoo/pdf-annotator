@@ -12,7 +12,7 @@ function App() {
   const [numPages, setNumPages] = useState(0)
   const [pageNumber, setPageNumber] = useState(1)
   const [tool, setTool] = useState('select')
-  const { annotations, addAnnotation } = useAnnotations(PDF_FILE)
+  const { annotations, addAnnotation, clearAnnotations } = useAnnotations(PDF_FILE)
 
   const pageAnnotations = annotations.filter(
     (annotation) => annotation.page === pageNumber,
@@ -40,6 +40,14 @@ function App() {
               {item.label}
             </button>
           ))}
+          <button
+            type="button"
+            className="border px-3 py-2"
+            disabled={annotations.length === 0}
+            onClick={clearAnnotations}
+          >
+            Clear
+          </button>
         </div>
 
         <nav className="flex items-center gap-3">
